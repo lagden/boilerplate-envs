@@ -13,15 +13,16 @@ Utilizados nos projetos:
 
 ⚠️ **Atenção!**
 
-Essas **variáveis de ambiente** não são genéricas, elas dependem de uma estrutura específica para que funcionem adequadamente.
+Essas **variáveis de ambiente** dependem de uma estrutura específica para que funcionem adequadamente.
 
 **Exemplo:**
 
-```shell
+```
 npx degit lagden/boilerplate-gql#main meu_app
 cd meu_app
-npx degit lagden/boilerplate-bin#main bin
-npx degit lagden/boilerplate-envs#main ./ --force
+npx degit lagden/boilerplate-bin/files#main bin
+npx degit lagden/boilerplate-envs/files#main ./ --force
+npx degit lagden/boilerplate-docker-nodejs/files#main ./ --force
 ```
 
 
