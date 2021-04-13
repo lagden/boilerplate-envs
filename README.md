@@ -18,11 +18,11 @@ Essas **variáveis de ambiente** dependem de uma estrutura específica para que 
 **Exemplo:**
 
 ```
-npx degit lagden/boilerplate-gql#main meu_app
+yarn dlx degit lagden/boilerplate-rest#master meu_app
 cd meu_app
-npx degit lagden/boilerplate-bin/files#main bin
-npx degit lagden/boilerplate-envs/files#main ./ --force
-npx degit lagden/boilerplate-docker-nodejs/files#main ./ --force
+yarn dlx degit lagden/boilerplate-bin/files#main bin
+yarn dlx degit lagden/boilerplate-envs/files#main ./ --force
+yarn dlx degit lagden/boilerplate-docker-nodejs/files#main ./ --force
 ```
 
 
