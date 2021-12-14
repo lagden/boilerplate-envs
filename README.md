@@ -13,7 +13,7 @@ Utilizados nos projetos:
 
 ⚠️ **Atenção!**
 
-Essas **variáveis de ambiente** dependem de uma estrutura específica para que funcionem adequadamente.
+Essas **variáveis de ambiente** dependem de uma estrutura específica para que funcionem.
 
 **Exemplo:**
 
@@ -29,7 +29,7 @@ yarn dlx degit lagden/boilerplate-docker-nodejs/files#main ./ --force
 ## Variáveis
 
 Os arquivos `.env-*` são carregados de acordo com os **scripts**.  
-O arquivo `.env-base` contém todas as váriáveis, e são sobrescritos pelos outros **envs**.
+O arquivo `.env-base` contém todas as váriáveis, e são sobrescritos pelos outros **.env-\***.
 
 ---
 
@@ -112,20 +112,20 @@ Exemplo: `"0.0.0.0"`
 
 ### START_CMD
 
-Comando para iniciar a aplicação.
+Comando para iniciar a aplicação.  
 Exemplo: `"npm start"`
 
 
 ### TEST_CMD
 
-Comando para rodar o teste da aplicação.
+Comando para rodar o teste da aplicação.  
 Exemplo: `"npm test"`
 
 
 ### WATCH_CMD
 
-Comando para observar a aplicação.
-Exemplo: `"find server -type f | entr -r npm start"`
+Comando para observar a aplicação.  
+Exemplo: `"find server -type f | entr -rn npm start"`
 
 
 ### NETWORK_NAME
@@ -149,6 +149,12 @@ DEPLOY_RESOURCES_LIMITS_MEMORY=200M
 DEPLOY_RESERVATIONS_LIMITS_CPUS="'0.25'"
 DEPLOY_RESERVATIONS_LIMITS_MEMORY=100M
 ```
+
+
+### DOCKER_TARGET_BUILD
+
+Nome do alvo no `Dockerfile` para que seja realizado o build da imagem.
+
 
 ### USER
 
