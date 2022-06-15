@@ -17,12 +17,13 @@ Essas **variáveis de ambiente** dependem de uma estrutura específica para que 
 
 **Exemplo:**
 
-```
-yarn dlx degit lagden/boilerplate-rest#master meu_app
-cd meu_app
-yarn dlx degit lagden/boilerplate-bin/files#main bin
-yarn dlx degit lagden/boilerplate-envs/files#main ./ --force
-yarn dlx degit lagden/boilerplate-docker-nodejs/files#main ./ --force
+```shell
+npx tiged lagden/boilerplate-rest#main projeto
+cd projeto
+npx tiged lagden/boilerplate-bin/files#main bin --force
+npx tiged lagden/boilerplate-eslint/files/backend/.eslintrc.yml#main .eslintrc.yml --force
+npx tiged lagden/boilerplate-envs/files#main . --force
+npx tiged lagden/boilerplate-docker-nodejs/files#main . --force
 ```
 
 
@@ -94,17 +95,25 @@ Versão da aplicação.
 Exemplo: `base`
 
 
+### REQUIRE_GEN
+
+Gera o arquivo **javascript** com as variáveis definidas no `ENV_INCLUDE`.  
+Exemplo: `1`
+
+
 ### ENV_INCLUDE
 
 Variáveis que serão incluídas no arquivo **javascript**, caso o `REQUIRE_GEN` for `1`.  
+Exemplo: `EBUG NODE_ENV APP_ENV`
 
 
-### REQUIRE_GEN=0
+### PUBLIC_DIR
 
-Gera o arquivo **javascript** com as variáveis definidas no `ENV_INCLUDE`.
+Diretório utilizado para publicação da aplicação frontend.  
+Exemplo: `./public`
 
 
-### HOSTNAME_CUSTOM="0.0.0.0"
+### HOSTNAME_CUSTOM
 
 Nome do hostname local.  
 Exemplo: `"0.0.0.0"`
@@ -119,13 +128,19 @@ Exemplo: `"npm start"`
 ### TEST_CMD
 
 Comando para rodar o teste da aplicação.  
-Exemplo: `"npm test"`
+Exemplo: `"npm test -- -u"`
 
 
 ### WATCH_CMD
 
 Comando para observar a aplicação.  
-Exemplo: `"find server -type f | entr -rn npm start"`
+Exemplo: `"find server static src -type f | entr -rn ${START_CMD}"`
+
+
+### WATCH_LOCAL_CMD
+
+Comando para observar a aplicação rodando local.  
+Exemplo: `${WATCH_CMD}`
 
 
 ### NETWORK_NAME
@@ -146,8 +161,8 @@ Configurações de deploy da aplicação no **docker**.
 DEPLOY_REPLICAS=1
 DEPLOY_RESOURCES_LIMITS_CPUS="'0.50'"
 DEPLOY_RESOURCES_LIMITS_MEMORY=200M
-DEPLOY_RESERVATIONS_LIMITS_CPUS="'0.25'"
-DEPLOY_RESERVATIONS_LIMITS_MEMORY=100M
+# DEPLOY_RESERVATIONS_LIMITS_CPUS="'0.25'"
+# DEPLOY_RESERVATIONS_LIMITS_MEMORY=100M
 ```
 
 
