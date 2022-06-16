@@ -34,6 +34,10 @@ O arquivo `.env-base` contém todas as váriáveis, e são sobrescritos pelos ou
 
 ---
 
+### REGISTRY_GOOGLE_CLOUD
+
+Informa que o **registry** fica no Google Cloud.
+Exemplo: `0`
 
 ### REGISTRY
 
