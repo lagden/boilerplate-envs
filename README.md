@@ -135,6 +135,11 @@ Comando para rodar o teste da aplicação.
 Exemplo: `"npm test -- -u"`
 
 
+### BUILD_LOCAL_CMD
+Comando para compilar a aplicação.  
+Exemplo: `"npm run build"`
+
+
 ### WATCH_CMD
 
 Comando para observar a aplicação.  
