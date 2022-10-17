@@ -6,6 +6,7 @@ Utilizados nos projetos:
 
 - [Boilerplate Rest](https://github.com/lagden/boilerplate-rest)
 - [Boilerplate GraphQL](https://github.com/lagden/boilerplate-gql)
+- [Boilerplate Websocket](https://github.com/lagden/boilerplate-ws)
 - [Boilerplate Svelte](https://github.com/lagden/boilerplate-svelte)
 
 
@@ -21,7 +22,7 @@ Essas **variáveis de ambiente** dependem de uma estrutura específica para que 
 npx tiged lagden/boilerplate-rest#main projeto
 cd projeto
 npx tiged lagden/boilerplate-bin/files#main bin --force
-npx tiged lagden/boilerplate-eslint/files/backend/.eslintrc.yml#main .eslintrc.yml --force
+npx tiged lagden/boilerplate-eslint/files/backendl#main . --force
 npx tiged lagden/boilerplate-envs/files#main . --force
 npx tiged lagden/boilerplate-docker-nodejs/files#main . --force
 ```
@@ -30,7 +31,7 @@ npx tiged lagden/boilerplate-docker-nodejs/files#main . --force
 ## Variáveis
 
 Os arquivos `.env-*` são carregados de acordo com os **scripts**.  
-O arquivo `.env-base` contém todas as váriáveis, e são sobrescritos pelos outros **.env-\***.
+O arquivo `.env-base` contém todas as váriáveis, e são mesclados pelos outros **.env-\***.
 
 ---
 
@@ -48,6 +49,12 @@ Exemplo: `docker.io`
 ### IMAGE
 
 Nome da imagem.  
+Exemplo: `lagden/boilerplate`
+
+
+### PM
+
+Package manager na aplicação.  
 Exemplo: `lagden/boilerplate`
 
 
@@ -108,7 +115,7 @@ Exemplo: `1`
 ### ENV_INCLUDE
 
 Variáveis que serão incluídas no arquivo **javascript**, caso o `REQUIRE_GEN` for `1`.  
-Exemplo: `EBUG NODE_ENV APP_ENV`
+Exemplo: `DEBUG NODE_ENV APP_ENV`
 
 
 ### PUBLIC_DIR
@@ -170,8 +177,6 @@ Configurações de deploy da aplicação no **docker**.
 DEPLOY_REPLICAS=1
 DEPLOY_RESOURCES_LIMITS_CPUS="'0.50'"
 DEPLOY_RESOURCES_LIMITS_MEMORY=200M
-# DEPLOY_RESERVATIONS_LIMITS_CPUS="'0.25'"
-# DEPLOY_RESERVATIONS_LIMITS_MEMORY=100M
 ```
 
 
