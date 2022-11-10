@@ -58,6 +58,12 @@ Package manager na aplicação.
 Exemplo: `lagden/boilerplate`
 
 
+### BUILD_ENV
+
+Ambiente do Node no container de "build_frontend".  
+Exemplo: `development`
+
+
 ### NODE_ENV
 
 Ambiente do Node.  
