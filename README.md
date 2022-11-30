@@ -121,7 +121,7 @@ Exemplo: `DEBUG NODE_ENV APP_ENV`
 ### PUBLIC_DIR
 
 Diretório utilizado para publicação da aplicação frontend.  
-Exemplo: `./public`
+Exemplo: `./dist`
 
 
 ### HOSTNAME_CUSTOM
