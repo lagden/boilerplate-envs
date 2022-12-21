@@ -1,6 +1,6 @@
 # Boilerplate Envs
 
-Boilerplate com as variáveis de ambiente.
+Boilerplate das variáveis de ambiente.
 
 Utilizados nos projetos:
 
@@ -11,10 +11,6 @@ Utilizados nos projetos:
 
 
 ## Como usar
-
-⚠️ **Atenção!**
-
-Essas **variáveis de ambiente** dependem de uma estrutura específica para que funcionem.
 
 **Exemplo:**
 
@@ -30,8 +26,7 @@ npx tiged lagden/boilerplate-docker-nodejs/files#main . --force
 
 ## Variáveis
 
-Os arquivos `.env-*` são carregados de acordo com os **scripts**.  
-O arquivo `.env-base` contém todas as váriáveis, e são mesclados pelos outros **.env-\***.
+O arquivo `.env-base` contém todas as váriáveis e podem ser substituídas pelos outros **.env-\***.
 
 ---
 
@@ -55,7 +50,7 @@ Exemplo: `lagden/boilerplate`
 ### PM
 
 Package manager na aplicação.  
-Exemplo: `lagden/boilerplate`
+Exemplo: `npm`
 
 
 ### NODE_ENV
@@ -142,21 +137,21 @@ Comando para rodar o teste da aplicação.
 Exemplo: `"npm test -- -u"`
 
 
-### BUILD_LOCAL_CMD
-Comando para compilar a aplicação.  
-Exemplo: `"npm run build"`
-
-
 ### WATCH_CMD
 
-Comando para observar a aplicação.  
+Comando para assitir a aplicação.  
 Exemplo: `"find server static src -type f | entr -rn ${START_CMD}"`
 
 
 ### WATCH_LOCAL_CMD
 
-Comando para observar a aplicação rodando local.  
+Comando para assitir a aplicação rodando local.  
 Exemplo: `${WATCH_CMD}`
+
+
+### BUILD_LOCAL_CMD
+Comando para compilar a aplicação local.  
+Exemplo: `"npm run build"`
 
 
 ### NETWORK_NAME
