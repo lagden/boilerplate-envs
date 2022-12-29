@@ -116,7 +116,7 @@ Exemplo: `DEBUG NODE_ENV APP_ENV`
 ### PUBLIC_DIR
 
 Diretório utilizado para publicação da aplicação frontend.  
-Exemplo: `./dist`
+Exemplo: `dist`
 
 
 ### HOSTNAME_CUSTOM
@@ -125,33 +125,27 @@ Nome do hostname local.
 Exemplo: `"0.0.0.0"`
 
 
-### START_CMD
+### RUN_CMD
 
 Comando para iniciar a aplicação.  
 Exemplo: `"npm start"`
+
+
+### WATCH_CMD
+
+Comando para assitir a aplicação.  
+Exemplo: `"node --watch-path=server server"`
+
+
+### BUILD_CMD
+Comando para compilar a aplicação local.  
+Exemplo: `"npm run build"`
 
 
 ### TEST_CMD
 
 Comando para rodar o teste da aplicação.  
 Exemplo: `"npm test -- -u"`
-
-
-### WATCH_CMD
-
-Comando para assitir a aplicação.  
-Exemplo: `"find server static src -type f | entr -rn ${START_CMD}"`
-
-
-### WATCH_LOCAL_CMD
-
-Comando para assitir a aplicação rodando local.  
-Exemplo: `${WATCH_CMD}`
-
-
-### BUILD_LOCAL_CMD
-Comando para compilar a aplicação local.  
-Exemplo: `"npm run build"`
 
 
 ### NETWORK_NAME
