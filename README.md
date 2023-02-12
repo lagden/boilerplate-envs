@@ -18,15 +18,15 @@ Utilizados nos projetos:
 npx tiged lagden/boilerplate-rest#main projeto
 cd projeto
 npx tiged lagden/boilerplate-bin/files#main bin --force
+npx tiged lagden/boilerplate-envs/files#main .env --force
 npx tiged lagden/boilerplate-eslint/files/backend#main . --force
-npx tiged lagden/boilerplate-envs/files#main . --force
 npx tiged lagden/boilerplate-docker-nodejs/files#main . --force
 ```
 
 
 ## Variáveis
 
-O arquivo `.env-base` contém todas as váriáveis e podem ser substituídas pelos outros **.env-\***.
+O arquivo `base.conf.sh` contém todas as váriáveis e podem ser sobrescrita pelos outros `*.conf.sh`.
 
 ---
 
@@ -50,7 +50,7 @@ Exemplo: `lagden/boilerplate`
 ### PM
 
 Package manager na aplicação.  
-Exemplo: `npm`
+Exemplo: `pnpm`
 
 
 ### NODE_ENV
@@ -128,13 +128,13 @@ Exemplo: `"0.0.0.0"`
 ### RUN_CMD
 
 Comando para iniciar a aplicação.  
-Exemplo: `"npm start"`
+Exemplo: `"node server"`
 
 
 ### WATCH_CMD
 
 Comando para assitir a aplicação.  
-Exemplo: `"node --watch-path=server server"`
+Exemplo: `"node --watch server/index.js"`
 
 
 ### BUILD_CMD

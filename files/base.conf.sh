@@ -2,7 +2,7 @@ REGISTRY_GOOGLE_CLOUD=0
 REGISTRY=docker.io
 IMAGE=lagden/boilerplate
 
-PM=npm
+PM=pnpm
 
 NODE_ENV=production
 APP_ENV=production
@@ -39,8 +39,8 @@ HOSTNAME_CUSTOM="0.0.0.0"
 # Frontend
 
 # Unix and Windows CMD
-RUN_CMD="npx sirv ${PUBLIC_DIR} --dev -eBcm 0 -H ${HOSTNAME_CUSTOM} --port ${PORT}"
-WATCH_CMD="npm run previte; npx vite --cors --port ${PORT} --host ${HOSTNAME_CUSTOM}"
+RUN_CMD="npx sirv ${PUBLIC_DIR} --dev -eBc -m 0 -H ${HOSTNAME_CUSTOM} --port ${PORT}"
+WATCH_CMD="npm run predev; npx vite --cors --port ${PORT} --host ${HOSTNAME_CUSTOM}"
 BUILD_CMD="npm run build"
 
 # ----------
@@ -55,8 +55,8 @@ TEST_CMD="npm test -- -u"
 
 # ----------
 
-DOCKER_TARGET_BUILD=main
-# DOCKER_TARGET_BUILD=main_frontend
+# DOCKER_TARGET_BUILD=main
+DOCKER_TARGET_BUILD=main_frontend
 
 # ----------
 
