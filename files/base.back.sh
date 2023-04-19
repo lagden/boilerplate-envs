@@ -26,8 +26,8 @@ VERSION=base
 
 # ----------
 
-REQUIRE_GEN=1
-ENV_INCLUDE="DEBUG NODE_ENV APP_ENV APP_NS VERSION"
+REQUIRE_GEN=0
+ENV_INCLUDE=""
 
 # ----------
 
@@ -36,27 +36,13 @@ HOSTNAME_CUSTOM="0.0.0.0"
 
 # ----------
 
-# Frontend
-
-# Unix and Windows CMD
-RUN_CMD="npx sirv ${PUBLIC_DIR} --dev -eBc -m 0 -H ${HOSTNAME_CUSTOM} --port ${PORT}"
-WATCH_CMD="npm run predev; npx vite --cors --port ${PORT} --host ${HOSTNAME_CUSTOM}"
-BUILD_CMD="npm run build"
-
-# ----------
-
-# # Backend
-# RUN_CMD="node server"
-# WATCH_CMD="node --watch server/index.js"
-
-# ----------
-
+RUN_CMD="node server"
+WATCH_CMD="node --watch server/index.js"
 TEST_CMD="npm test -- -u"
 
 # ----------
 
-# DOCKER_TARGET_BUILD=main
-DOCKER_TARGET_BUILD=main_frontend
+DOCKER_TARGET_BUILD=main
 
 # ----------
 

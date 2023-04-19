@@ -15,6 +15,7 @@ EXAMPLE_DEV_FLOAT=123.456
 EXAMPLE_DEV_BOOL=true
 EXAMPLE_DEV_ARRAY='["apenas", 1, "show", true]'
 EXAMPLE_DEV_OBJ='{"nome": "Tadashi", "idade": 18}'
+
 # coloque suas variáveis
 # ...
 
