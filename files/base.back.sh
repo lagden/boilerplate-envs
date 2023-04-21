@@ -32,7 +32,7 @@ ENV_INCLUDE=""
 # ----------
 
 PUBLIC_DIR="dist"
-HOSTNAME_CUSTOM="127.0.0.1"
+HOSTNAME_CUSTOM="0.0.0.0"
 
 # ----------
 
