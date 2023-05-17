@@ -36,7 +36,7 @@ HOSTNAME_CUSTOM="0.0.0.0"
 
 # ----------
 
-RUN_CMD="npx sirv ${PUBLIC_DIR} --dev -eBc -m 0 -H ${HOSTNAME_CUSTOM} --port ${PORT}"
+RUN_CMD="/sws -d ${PUBLIC_DIR} -p ${PORT} -g info -q 10 -e false -c '*'"
 WATCH_CMD="npm run predev; npx vite --cors --port ${PORT} --host ${HOSTNAME_CUSTOM} --open"
 BUILD_CMD="npm run build"
 TEST_CMD="npm test -- -u"
