@@ -6,7 +6,7 @@ ENV_BASE_DIRNAME="$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)"
 NODE_ENV=production
 APP_ENV=staging
 
-VERSION=1.0.0-staging
+VERSION=staging
 
 # ----------
 

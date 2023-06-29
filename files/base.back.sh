@@ -26,11 +26,6 @@ VERSION=base
 
 # ----------
 
-REQUIRE_GEN=0
-ENV_INCLUDE=""
-
-# ----------
-
 PUBLIC_DIR="dist"
 HOSTNAME_CUSTOM="0.0.0.0"
 
@@ -38,7 +33,7 @@ HOSTNAME_CUSTOM="0.0.0.0"
 
 RUN_CMD="node server"
 WATCH_CMD="node --watch server/index.js"
-TEST_CMD="npm test -- -u"
+TEST_CMD="npm test"
 
 # ----------
 
@@ -50,7 +45,8 @@ NETWORK_NAME=${APP_NS}_net_${APP_ENV}
 VOL_NAME=${APP_NS}_vol_${APP_ENV}
 
 DEPLOY_REPLICAS=1
-DEPLOY_RESOURCES_LIMITS_CPUS="'0.50'"
+
+DEPLOY_RESOURCES_LIMITS_CPUS=0.50
 DEPLOY_RESOURCES_LIMITS_MEMORY=200M
 
 DEPLOY_RESTART_POLICY_DELAY=5s
