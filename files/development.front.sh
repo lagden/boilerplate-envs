@@ -25,9 +25,5 @@ ENV_INCLUDE="NODE_ENV APP_ENV APP_NS VERSION EXAMPLE_DEV_NUM EXAMPLE_DEV_FLOAT E
 
 # ----------
 
-RUN_CMD="npx sirv ${PUBLIC_DIR} --dev -eBc -m 0 -H ${HOSTNAME_CUSTOM} --port ${PORT}"
-
-# ----------
-
 NETWORK_NAME=${APP_NS}_net_${APP_ENV}
 VOL_NAME=${APP_NS}_vol_${APP_ENV}

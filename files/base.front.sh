@@ -27,11 +27,13 @@ ENV_INCLUDE="NODE_ENV APP_ENV APP_NS VERSION"
 # ----------
 
 PUBLIC_DIR="dist"
-HOSTNAME_CUSTOM="0.0.0.0"
+HOSTNAME_CUSTOM="127.0.0.1"
 
 # ----------
 
-RUN_CMD="/sws -d ${PUBLIC_DIR} -p ${PORT} -g info -q 10 -e false -c '*'"
+RUST_BACKTRACE=full
+# RUN_CMD="static-web-server -a ${HOSTNAME_CUSTOM:-127.0.0.1} -d ${PUBLIC_DIR} -p ${PORT} -g info -c \"*\""
+RUN_CMD="sirv ${PUBLIC_DIR:-dist} --dev -eBcm 0 -H ${HOSTNAME_CUSTOM:-127.0.0.1} --port ${PORT:-5001}"
 WATCH_CMD="npm run predev; npx vite --cors --port ${PORT} --host ${HOSTNAME_CUSTOM} --open"
 BUILD_CMD="npm run build"
 TEST_CMD="npm test"

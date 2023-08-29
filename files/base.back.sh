@@ -27,12 +27,12 @@ VERSION=base
 # ----------
 
 PUBLIC_DIR="dist"
-HOSTNAME_CUSTOM="0.0.0.0"
+HOSTNAME_CUSTOM="127.0.0.1"
 
 # ----------
 
-RUN_CMD="node server"
-WATCH_CMD="node --watch server/index.js"
+RUN_CMD="cli/run.js"
+WATCH_CMD="node --watch cli/run.js"
 TEST_CMD="npm test"
 
 # ----------
