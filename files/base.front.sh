@@ -1,63 +1,34 @@
-REGISTRY_GOOGLE_CLOUD=0
-REGISTRY=docker.io
-IMAGE=lagden/boilerplate
+REGISTRY="docker.io"
+IMAGE="lagden/boilerplate"
 
-PM=pnpm
+PM="pnpm"
 
-NODE_ENV=production
-APP_ENV=production
+NODE_ENV="production"
 
-APP_NS=lagden_boilerplate
-
-PORT_PUBLISHED=5001
 PORT=5001
 
-VERSION=base
+# ----------
+
+APP_ENV="production"
+APP_NS="lagden_boilerplate"
 
 # ----------
+
+APP_BASE="/"
+APP_TITLE="Boilerplate"
+APP_DESCRIPTION="Apenas um show"
+APP_TARGET_JS="boilerplate_js"
 
 # coloque suas variáveis
 # ...
 
 # ----------
 
-REQUIRE_GEN=1
-ENV_INCLUDE="NODE_ENV APP_ENV APP_NS VERSION"
-
-# ----------
-
-PUBLIC_DIR="dist"
-HOSTNAME_CUSTOM="127.0.0.1"
-
-# ----------
-
-RUST_BACKTRACE=full
-# RUN_CMD="static-web-server -a ${HOSTNAME_CUSTOM:-127.0.0.1} -d ${PUBLIC_DIR} -p ${PORT} -g info -c \"*\""
-RUN_CMD="sirv ${PUBLIC_DIR:-dist} --dev -eBcm 0 -H ${HOSTNAME_CUSTOM:-127.0.0.1} --port ${PORT:-5001}"
-WATCH_CMD="npm run predev; npx vite --cors --port ${PORT} --host ${HOSTNAME_CUSTOM} --open"
+RUN_CMD="npm start"
+WATCH_CMD="npm run dev"
 BUILD_CMD="npm run build"
 TEST_CMD="npm test"
 
 # ----------
 
-DOCKER_TARGET_BUILD=main_frontend
-
-# ----------
-
-NETWORK_NAME=${APP_NS}_net_${APP_ENV}
-VOL_NAME=${APP_NS}_vol_${APP_ENV}
-
-DEPLOY_REPLICAS=1
-
-DEPLOY_RESOURCES_LIMITS_CPUS=0.50
-DEPLOY_RESOURCES_LIMITS_MEMORY=200M
-
-DEPLOY_RESTART_POLICY_DELAY=5s
-DEPLOY_RESTART_POLICY_MAX_ATTEMPTS=3
-
-# ----------
-
-USER=lagden
-SERVER=10.20.30.40
-DEPLOY_FOLDER=/server/app/folder/boilerplate
-DOCKER_STACK_NAME=${APP_NS}
+DOCKER_TARGET_BUILD="main_frontend"

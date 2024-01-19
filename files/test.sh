@@ -3,17 +3,13 @@ ENV_BASE_DIRNAME="$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)"
 
 # ----------
 
-NODE_ENV=development
-APP_ENV=test
+NODE_ENV="development"
 
-VERSION=test
+# ----------
+
+APP_ENV="test"
 
 # ----------
 
 # coloque suas variáveis
 # ...
-
-# ----------
-
-NETWORK_NAME=${APP_NS}_net_${APP_ENV}
-VOL_NAME=${APP_NS}_vol_${APP_ENV}

@@ -3,11 +3,11 @@ ENV_BASE_DIRNAME="$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)"
 
 # ----------
 
-NODE_ENV="production"
+NODE_ENV="development"
 
 # ----------
 
-APP_ENV="staging"
+APP_ENV="development"
 
 # ----------
 
