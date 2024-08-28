@@ -7,15 +7,17 @@ NODE_ENV="production"
 
 PORT=5001
 
-DEBUG_HIDE_DATE=0
-DEBUG_COLORS=1
-DEBUG_PREFIX="${APP_NS}"
-DEBUG="${DEBUG_PREFIX}:*"
-
 # ----------
 
 APP_ENV="production"
 APP_NS="lagden_boilerplate"
+
+# ----------
+
+DEBUG_HIDE_DATE=0
+DEBUG_COLORS=1
+DEBUG_PREFIX="${APP_NS}"
+DEBUG="${DEBUG_PREFIX}:*"
 
 # ----------
 

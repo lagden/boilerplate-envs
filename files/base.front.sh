@@ -19,6 +19,8 @@ APP_TITLE="Boilerplate"
 APP_DESCRIPTION="Apenas um show"
 APP_TARGET_JS="boilerplate_js"
 
+# ----------
+
 # coloque suas variáveis
 # ...
 
